@@ -1,0 +1,248 @@
+/* General Styles */
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+input{
+  width: 96%;
+  height: 36px;
+  border-radius: 6px;
+  border: solid rgb(170, 168, 168) 1px;
+  padding-left: 14px;
+}
+button{
+  width: 104%;
+  margin-top: 35px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: none;
+  font-size: 18px;
+  background-color: hsl(278, 68%, 11%);
+  color: rgb(233, 230, 230);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+button:hover{
+  opacity: 0.8;
+}
+p{
+  margin: 0;
+  font-family: 'Space Grotesk', sans-serif;
+}
+.warn-msg{
+  font-size: 14px;
+  color: red;
+  white-space: nowrap;
+}
+
+/* Card preview Styles */
+
+/* Card Back Style*/ 
+.card-preview-container{
+  min-width: 375px;
+  width: 100%;
+  height: 240px;
+  background: url(images/bg-main-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-back-container{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  margin-top: 40px;
+  width: 290px;
+  margin-left: 60px;
+  height: 150px;
+  background: url(images/bg-card-back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cvc{
+  color: white;
+  font-size: 13px;
+  margin-left: 190px;
+  margin-top: 15px;
+}
+
+/* Card Front Style */
+.card-front-container{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 130px;
+  width: 290px;
+  border: none;
+  border-top-right-radius:5px;
+  margin-left: 15px;
+  height: 150px;
+  background: url(images/bg-card-front.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.card-front-elements-container{
+  margin: 20px;
+}
+.card-logo{
+  width: 50px;
+}
+.card-number{
+  color: white;
+  font-size: 21px;
+  margin-top: 25px;
+}
+.owner-container{
+  display: flex;
+  justify-content: space-between;
+}
+.owner-text{
+  color: hsl(270, 3%, 87%);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+
+/* Card input container Style */
+.card-input-container{
+  display: flex;
+  flex-direction: column;
+  width: 315px;
+  height: 350px;
+  margin-top: 125px;
+  margin-left: 30px;
+}
+.input-top-text{
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+input::placeholder{
+  font-size: 15px;
+  font-weight: bold;
+  color: hsl(280, 9%, 66%);
+}
+input:focus{
+  outline: none;
+}
+.input-section-wrapper{
+  margin-bottom: 20px;
+}
+
+.card-input-inputs-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  column-gap: 30px;
+  margin-right: 8xpx;
+}
+
+/* Complete section container*/
+.complete-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.thanks-text{
+  font-size: 35px;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.thanks-gray-text{
+  font-size: 20px;
+  color: rgb(112, 110, 110);
+}
+
+/* 1440px Design */
+@media screen and (min-width: 1439px) {
+  main{
+    flex-direction: row;
+  }
+  /* Left bar style */
+  .card-preview-container{
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    width: 450px;
+    height: auto;
+    background: url(images/bg-main-desktop.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  /*  */
+  .card-input-container{
+    margin-left: 800px;
+    margin-top: 200px;
+  }
+  /* Card Front Style */
+  .card-front-container{
+    margin-left: 150px;
+    width: 85%;
+    height: 220px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .card-front-elements-container{
+    margin: 25px;
+  }
+  .card-logo{
+    width: 70px;
+  }
+  .card-number{
+    color: white;
+    font-size: 28px;
+    margin-top: 40px;
+  }
+  .owner-text{
+    color: hsl(270, 3%, 87%);
+    font-size: 14px;
+    margin-top: 20px;
+  }
+  /* Card Back Style */
+  .card-back-container{
+    border-top-right-radius: 8px;
+    border-bottom-left-radius:8px ;
+    border-bottom-right-radius:8px ;
+    margin-top: 385px;
+    width: 85%;
+    height: 220px;
+    margin-left: 250px;
+  }
+  .cvc{
+    color: white;
+    font-size: 15px;
+    margin-left: 280px;
+    margin-top: 0px;
+  }
+  /* Card input container Style */
+  .input-top-text{
+    font-size: 17px;
+  }
+  input::placeholder{
+    font-size: 16px;
+  }
+
+  .thanks-text{
+    font-size: 40px;
+  }
+}
+
+@media screen and (min-width: 1450px) {
+  .card-input-container{
+    margin-left: 1024px;
+    margin-top: 300px;
+  }
+}
