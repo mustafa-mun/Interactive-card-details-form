@@ -153,7 +153,7 @@ monthInput.addEventListener('keyup', function(){
     monthInput.style.borderColor = "red"
   }
 })
-yearInput.addEventListener('keydown', function(){
+yearInput.addEventListener('keyup', function(){
   const year = yearInput.value;
   if(dateRegex.test(year)){
     yearInput.style.borderColor = "rgb(170, 168, 168)"
@@ -163,7 +163,7 @@ yearInput.addEventListener('keydown', function(){
     yearInput.style.borderColor = "red"
   }
 })
-cvcInput.addEventListener('keydown', function(){
+cvcInput.addEventListener('keyup', function(){
   const cvc = cvcInput.value;
   if(cvcRegex.test(cvc)){
     cvcInput.style.borderColor = "rgb(170, 168, 168)"
