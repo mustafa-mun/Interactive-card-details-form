@@ -51,6 +51,16 @@ Users should be able to:
 - Mobile-first workflow
 - Vanilla JavaScript
 
+### What I learned
+
+I tried to reflect inputs values to cards at the same time and i used keyup event listener for this but im sure there are better ways to do this. I will continue to search for it.
+
+
+```js
+nameInput.addEventListener('keyup',function(){
+})
+```
+
 
 ### Continued development
 
