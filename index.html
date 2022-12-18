@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+</head>
+<body>
+  <main>
+    <!-- Main container -->
+    <section class="card-preview-container">
+      <!-- Card preview container -->
+      <div class="card-back-container">
+        <!-- Card Back Side -->
+        <p id="cvc" class="cvc">000</p>
+      </div>
+      <div class="card-front-container">
+        <!-- Card Front Side -->
+        <div class="card-front-elements-container">
+          <div>
+            <img class="card-logo" src="images/card-logo.svg" alt="">
+          </div>
+          <div>
+            <p class="card-number" id="card-number">0000 0000 0000 0000</p>
+          </div>
+          <div class="owner-container">
+            <p class="owner-text" id="card-owner">JANE APPLESEED</p>
+            <p class="owner-text" id="card-date">00/00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card-input-container">
+      <!-- Card input container -->
+      <div id="input-container" class="card-input">
+        <div class="input-section-wrapper">
+          <p class="input-top-text">CARDHOLDER NAME</p>
+          <input id="name-input" type="text" placeholder="e.g Jane Appleseed">
+          <p class="warn-msg" id="name-warn"></p>
+        </div>
+        <div class="input-section-wrapper">
+          <p class="input-top-text">CARD NUMBER</p>
+          <input id="number-input" type="text" placeholder="e.g 1234 5678 9123 0000">
+          <p class="warn-msg" id="number-warn"></p>
+        </div>
+        <div class="input-section-wrapper">
+          <p>EXP. DATE (MM/YY)</p>
+        </div>
+        <div class="card-input-inputs-container">
+          <input id="month-input" type="text" placeholder="MM">
+          <input id="year-input" type="text" placeholder="YY">
+          <div>
+            <input id="cvc-input" type="text" placeholder="e.g 123">
+            <p class="warn-msg" id="cvc-warn"></p>
+          </div>
+          <p class="warn-msg" id="date-warn""></p>
+        </div>
+      </div>
+
+      <div id="complete" class="complete-container">
+        <img src="images/icon-complete.svg" alt="">
+        <p class="thanks-text">Thank you!</p>
+        <p class="thanks-gray-text">We've added your card details</p>
+      </div>
+    
+      <button onclick="cardChange()">Confirm</button>
+    </section>
+    
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
