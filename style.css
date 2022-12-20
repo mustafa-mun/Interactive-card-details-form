@@ -36,6 +36,9 @@ p{
   margin: 0;
   font-family: 'Space Grotesk', sans-serif;
 }
+a{
+  width: 100%;
+}
 .warn-msg{
   font-size: 14px;
   color: red;
