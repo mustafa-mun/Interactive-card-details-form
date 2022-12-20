@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://brilliant-clafoutis-0064ed.netlify.app/](https://brilliant-clafoutis-0064ed.netlify.app/)
+- Live Site URL: [https://bright-gumption-e55db2.netlify.app/](https://bright-gumption-e55db2.netlify.app/)
 
 ## My process
 
