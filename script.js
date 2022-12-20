@@ -7,11 +7,10 @@ const nameInput = document.getElementById('name-input');
 const monthInput = document.getElementById('month-input');
 const yearInput = document.getElementById('year-input');
 const cvcInput = document.getElementById('cvc-input')
-const btn = document.querySelector('button');
+const confirmBtn = document.getElementById('confirm-btn');
 const complete = document.getElementById('complete');
 const inputContainer = document.getElementById('input-container')
 const cvcEl = document.getElementById('cvc');
-
 
 const nameWarn = document.getElementById('name-warn');
 const numberWarn = document.getElementById('number-warn');
@@ -20,8 +19,9 @@ const cvcWarn = document.getElementById('cvc-warn');
 
 complete.style.display = "none";
 
+
 const nameRegex = /^[a-zA-Z ]{2,30}$/; // Name validator
-const cardRegex = /^[\d]{4}\s[\d]{4}\s[\d]{4}\s[\d]{4}$/ // Credit card number validator 
+const cardRegex = /^[\d]{4}\s?[\d]{4}\s?[\d]{4}\s?[\d]{4}$/ // Credit card number validator 
 const dateRegex = /^[\d]{2}$/ // Date regex
 const cvcRegex = /^[\d]{3}$/ // Cvc regex
 
@@ -118,7 +118,7 @@ const cardChange = () => { // Confirm button function
     cardNumber.textContent = number;
     cardMonth.textContent = `${month}/`
     cardYear.textContent = `${year}`
-    btn.textContent = 'Continue'
+    confirmBtn.style.display = 'none';
     inputContainer.style.display = 'none'
     complete.style.display = 'flex'
     cvcEl.textContent = cvc
@@ -134,6 +134,7 @@ nameInput.addEventListener('keyup',function(){
     nameWarn.textContent = ''
   } else{
     nameInput.style.borderColor = "red"
+    nameWarn.textContent = "Enter a valid name!"
   }
 })
 numberInput.addEventListener('keyup', function(){
@@ -144,6 +145,7 @@ numberInput.addEventListener('keyup', function(){
     numberWarn.textContent = ''
   } else{
     numberInput.style.borderColor = "red"
+    numberWarn.textContent = "Enter a valid card number!"
   }
 })
 monthInput.addEventListener('keyup', function(){
@@ -154,6 +156,7 @@ monthInput.addEventListener('keyup', function(){
     dateWarn.textContent = ''
   } else{
     monthInput.style.borderColor = "red"
+    dateWarn.textContent = "Enter a valid date!"
   }
 })
 
@@ -165,6 +168,7 @@ yearInput.addEventListener('keyup', function(){
     dateWarn.textContent = ''
   } else{
     yearInput.style.borderColor = "red"
+    dateWarn.textContent = "Enter a valid date!"
   }
 })
 cvcInput.addEventListener('keyup', function(){
@@ -175,5 +179,6 @@ cvcInput.addEventListener('keyup', function(){
     cvcWarn.textContent = ''
   } else{
     cvcInput.style.borderColor = "red"
+    cvcWarn.textContent = "Enter a valid cvc!"
   }
 })
