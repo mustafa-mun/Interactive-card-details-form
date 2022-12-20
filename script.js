@@ -1,6 +1,7 @@
 const cardNumber = document.getElementById('card-number'); 
 const cardOwner = document.getElementById('card-owner');
-const cardDate = document.getElementById('card-date');
+const cardMonth = document.getElementById('card-month');
+const cardYear = document.getElementById('card-year')
 const numberInput = document.getElementById('number-input');
 const nameInput = document.getElementById('name-input');
 const monthInput = document.getElementById('month-input');
@@ -10,6 +11,7 @@ const btn = document.querySelector('button');
 const complete = document.getElementById('complete');
 const inputContainer = document.getElementById('input-container')
 const cvcEl = document.getElementById('cvc');
+
 
 const nameWarn = document.getElementById('name-warn');
 const numberWarn = document.getElementById('number-warn');
@@ -114,7 +116,8 @@ const cardChange = () => { // Confirm button function
   if(nameRegex.test(name) && cardRegex.test(number) && dateRegex.test(month) && dateRegex.test(year) &&cvcRegex.test(cvc)) {
     cardOwner.textContent = name;
     cardNumber.textContent = number;
-    cardDate.textContent = `${month}/${year}`
+    cardMonth.textContent = `${month}/`
+    cardYear.textContent = `${year}`
     btn.textContent = 'Continue'
     inputContainer.style.display = 'none'
     complete.style.display = 'flex'
@@ -147,17 +150,18 @@ monthInput.addEventListener('keyup', function(){
   const month = monthInput.value;
   if(dateRegex.test(month)){
     monthInput.style.borderColor = "rgb(170, 168, 168)"
-    cardDate.innerText = month + "/";
+    cardMonth.innerText = month + "/";
     dateWarn.textContent = ''
   } else{
     monthInput.style.borderColor = "red"
   }
 })
+
 yearInput.addEventListener('keyup', function(){
   const year = yearInput.value;
   if(dateRegex.test(year)){
     yearInput.style.borderColor = "rgb(170, 168, 168)"
-    cardDate.innerText += year
+    cardYear.innerText = year
     dateWarn.textContent = ''
   } else{
     yearInput.style.borderColor = "red"
